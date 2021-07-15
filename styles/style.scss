@@ -33,28 +33,32 @@ a {
 }
 
 nav {
-    width: 80%;
+    width: 50%;
     margin: auto;
     min-height: 10vh;
     padding: 3rem 0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     
     ul {
         display: flex;
         justify-content: space-between;
-        width: 30%;
+        width: 60%;
         list-style: none;
+        margin: auto;
     }
 
     li {
         font-size: 2rem;
     }
 
-    #logo {
-        flex: 1;
-        position: relative;
+    .bottom-line {
+        margin-top: 1vh;
+        margin: auto;
+        width: 60%;
+
+        .line {
+            height: 2px;
+            background-color: rgb(247, 125, 26);
+        }
     }
 }
 

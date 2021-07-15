@@ -33,26 +33,29 @@ a:hover {
 }
 
 nav {
-  width: 80%;
+  width: 50%;
   margin: auto;
   min-height: 10vh;
   padding: 3rem 0rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 nav ul {
   display: flex;
   justify-content: space-between;
-  width: 30%;
+  width: 60%;
   list-style: none;
+  margin: auto;
 }
 nav li {
   font-size: 2rem;
 }
-nav #logo {
-  flex: 1;
-  position: relative;
+nav .bottom-line {
+  margin-top: 1vh;
+  margin: auto;
+  width: 60%;
+}
+nav .bottom-line .line {
+  height: 2px;
+  background-color: #f77d1a;
 }
 
 .sub {
