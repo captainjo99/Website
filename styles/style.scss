@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%
+    font-size: 62.5%;
 }
 
 * {
@@ -10,7 +10,7 @@ html {
 
 body {
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     background: rgb(48, 48, 48);
 }
 
@@ -37,7 +37,7 @@ nav {
     margin: auto;
     min-height: 10vh;
     padding: 3rem 0rem;
-    
+
     ul {
         display: flex;
         justify-content: space-between;
@@ -52,13 +52,12 @@ nav {
 
     .bottom-line {
         margin-top: 1vh;
-        margin: auto;
-        width: 60%;
-
-        .line {
-            height: 2px;
-            background-color: rgb(247, 125, 26);
-        }
+        height: 2px;
+        width: 2%;
+        background-color: rgb(247, 125, 26);
+        display: block;
+        position: absolute;
+        transition: transform 0.5s ease-in-out;
     }
 }
 
@@ -110,7 +109,7 @@ nav {
     font-size: 2rem;
     transition: ease 0.3s;
     margin-top: 2vh;
-    
+
     &:hover {
         background-color: rgb(247, 125, 26);
     }
@@ -144,7 +143,7 @@ nav {
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
     .about {
         display: block;
     }
@@ -152,9 +151,9 @@ nav {
         width: 80vw;
         object-fit: cover;
     }
-} 
+}
 
-@media screen and (max-width:950px) {
+@media screen and (max-width: 950px) {
     nav {
         ul {
             width: 55%;
@@ -162,7 +161,7 @@ nav {
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     nav {
         ul {
             width: 70%;
@@ -170,7 +169,7 @@ nav {
     }
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     body {
         overflow-x: hidden;
     }
@@ -192,6 +191,10 @@ nav {
             padding: 50px;
             opacity: 0;
         }
+
+        .bottom-line {
+            display: none;
+        }
     }
     .burger {
         display: block;
@@ -199,7 +202,7 @@ nav {
 }
 
 @keyframes linkFade {
-    from{
+    from {
         opacity: 0;
         transform: translateX(50px);
     }
@@ -211,12 +214,12 @@ nav {
 
 .toggle {
     .line1 {
-        transform: rotate(-45deg) translate(-5px,6px);
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
     .line2 {
         opacity: 0;
     }
     .line3 {
-        transform: rotate(45deg) translate(-5px,-6px);
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
