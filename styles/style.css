@@ -120,15 +120,6 @@ p {
   font-size: 1.9rem;
 }
 
-a {
-  color: white;
-  text-decoration: none;
-  transition: ease 0.5s;
-}
-a:hover {
-  color: #f77d1a;
-}
-
 nav {
   z-index: 10;
   width: 100%;
@@ -146,6 +137,11 @@ nav ul {
 }
 nav li {
   font-size: 2rem;
+  transition: ease 0.4s;
+}
+nav li:hover {
+  color: #f77d1a;
+  cursor: pointer;
 }
 nav .bottom-line {
   margin-top: 1vh;
