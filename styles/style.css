@@ -1,70 +1,3 @@
-html {
-  font-size: 62.5%;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  background: #303030;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: lighter;
-}
-
-p {
-  font-size: 1.9rem;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-  transition: ease 0.5s;
-}
-a:hover {
-  color: #f77d1a;
-}
-
-nav {
-  width: 50%;
-  margin: auto;
-  min-height: 10vh;
-  padding: 3rem 0rem;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  list-style: none;
-  margin: auto;
-}
-nav li {
-  font-size: 2rem;
-}
-nav .bottom-line {
-  margin-top: 1vh;
-  height: 2px;
-  width: 2%;
-  background-color: #f77d1a;
-  display: block;
-  position: absolute;
-  transition: transform 0.5s ease-in-out;
-}
-
-.sub {
-  padding-top: 5vh;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .person {
   padding-top: 5vh;
   padding-left: 5vw;
@@ -112,22 +45,6 @@ nav .bottom-line {
   background-color: #f77d1a;
 }
 
-.burger {
-  display: none;
-  cursor: pointer;
-}
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px;
-  transition: all 0.3s ease;
-}
-
-.burger-active {
-  transform: translateX(0%);
-}
-
 .links ul {
   list-style: none;
   padding-top: 1rem;
@@ -149,14 +66,121 @@ nav .bottom-line {
        object-fit: cover;
   }
 }
+.bgimg {
+  background-image: url("./construction.png");
+  height: 110vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  filter: blur(3px);
+}
+
+.middle {
+  position: absolute;
+  text-shadow: 8px 8px 6px #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  background: #303030;
+}
+
+main {
+  display: flex;
+  overflow-x: hidden;
+  padding-top: 10vh;
+}
+
+h1 {
+  font-size: 9rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+p {
+  font-size: 1.9rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+a:hover {
+  color: #f77d1a;
+}
+
+nav {
+  z-index: 10;
+  width: 100%;
+  min-height: 10vh;
+  padding: 3vh 25vw;
+  position: fixed;
+  background: linear-gradient(#303030 30%, rgba(0, 0, 0, 0) 100%);
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  list-style: none;
+  margin: auto;
+}
+nav li {
+  font-size: 2rem;
+}
+nav .bottom-line {
+  margin-top: 1vh;
+  height: 2px;
+  width: 2%;
+  background-color: #f77d1a;
+  display: block;
+  position: absolute;
+  transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger-active {
+  transform: translateX(0%);
+}
+
 @media screen and (max-width: 950px) {
   nav ul {
-    width: 55%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
   nav ul {
-    width: 70%;
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {

@@ -1,0 +1,18 @@
+.bgimg {
+    background-image: url('./construction.png');
+    height: 110vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    filter: blur(3px);
+}
+
+.middle {
+    position: absolute;
+    text-shadow: 8px 8px 6px #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}

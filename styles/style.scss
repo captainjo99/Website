@@ -1,3 +1,10 @@
+@import 'about';
+@import 'construction';
+
+$bgcolor: rgb(48, 48, 48);
+$bgcolorlight: rgb(78, 78, 78);
+$maincolor: rgb(247, 125, 26);
+
 html {
     font-size: 62.5%;
 }
@@ -11,10 +18,20 @@ html {
 body {
     color: white;
     font-family: "Montserrat", sans-serif;
-    background: rgb(48, 48, 48);
+    background: $bgcolor;
+}
+
+main {
+    display: flex;
+    overflow-x: hidden;
+    padding-top: 10vh;
 }
 
 h1 {
+    font-size: 9rem;
+}
+
+h3 {
     font-size: 3rem;
     font-weight: lighter;
 }
@@ -28,15 +45,17 @@ a {
     text-decoration: none;
     transition: ease 0.5s;
     &:hover {
-        color: rgb(247, 125, 26);
+        color: $maincolor;
     }
 }
 
 nav {
-    width: 50%;
-    margin: auto;
+    z-index: 10;
+    width: 100%;
     min-height: 10vh;
-    padding: 3rem 0rem;
+    padding: 3vh 25vw;
+    position: fixed;
+    background: linear-gradient(rgba($bgcolor, 1) 30%, rgba(#000, 0) 100%);
 
     ul {
         display: flex;
@@ -54,64 +73,10 @@ nav {
         margin-top: 1vh;
         height: 2px;
         width: 2%;
-        background-color: rgb(247, 125, 26);
+        background-color: $maincolor;
         display: block;
         position: absolute;
-        transition: transform 0.5s ease-in-out;
-    }
-}
-
-.sub {
-    padding-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-.person {
-    padding-top: 5vh;
-    padding-left: 5vw;
-}
-
-.about {
-    display: flex;
-    padding-top: 3vh;
-    padding-left: 2vw;
-    padding-right: 10vw;
-}
-
-.bio {
-    padding-right: 2vw;
-}
-
-.mugshot {
-    padding-right: 2vw;
-    padding-bottom: 1vw;
-    width: 40vw;
-    height: auto;
-    object-fit: contain;
-}
-
-.download {
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-.btn {
-    background-color: rgb(48, 48, 48);
-    border-style: solid;
-    border-radius: 20px;
-    border-color: rgb(247, 125, 26);
-    color: white;
-    padding: 12px 30px;
-    cursor: pointer;
-    font-size: 2rem;
-    transition: ease 0.3s;
-    margin-top: 2vh;
-
-    &:hover {
-        background-color: rgb(247, 125, 26);
+        transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
 }
 
@@ -131,32 +96,10 @@ nav {
     transform: translateX(0%);
 }
 
-.links {
-    ul {
-        list-style: none;
-        padding-top: 1rem;
-        display: flex;
-    }
-    li {
-        padding: 1rem;
-        font-size: 3rem;
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    .about {
-        display: block;
-    }
-    .mugshot {
-        width: 80vw;
-        object-fit: cover;
-    }
-}
-
 @media screen and (max-width: 950px) {
     nav {
         ul {
-            width: 55%;
+            width: 100%;
         }
     }
 }
@@ -164,7 +107,7 @@ nav {
 @media screen and (max-width: 768px) {
     nav {
         ul {
-            width: 70%;
+            width: 100%;
         }
     }
 }
@@ -175,7 +118,7 @@ nav {
     }
     nav {
         ul {
-            background-color: rgb(78, 78, 78);
+            background-color: $bgcolorlight;
             position: absolute;
             right: 0px;
             height: 85vh;

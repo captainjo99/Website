@@ -25,11 +25,11 @@ const underlines = () => {
   const projectsButton = document.getElementById("projects");
   const galleryButton = document.getElementById("gallery");
   const aboutButton = document.getElementById("about");
-  /* const offset = parseInt(window.getComputedStyle(links).marginLeft.replace("px", "")) - links.getBoundingClientRect().left; */
   const offset = homeButton.getBoundingClientRect().left
+  const lineWidth = homeButton.clientWidth
   var line = document.getElementById("line")
 
-  line.style.width = homeButton.clientWidth + 'px';
+  line.style.width = lineWidth + 'px';
   line.style.left = offset + 'px'
 
   homeButton.addEventListener("click", () => {

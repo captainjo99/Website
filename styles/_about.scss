@@ -1,0 +1,68 @@
+.person {
+    padding-top: 5vh;
+    padding-left: 5vw;
+}
+
+.about {
+    display: flex;
+    padding-top: 3vh;
+    padding-left: 2vw;
+    padding-right: 10vw;
+}
+
+.bio {
+    padding-right: 2vw;
+}
+
+.mugshot {
+    padding-right: 2vw;
+    padding-bottom: 1vw;
+    width: 40vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.download {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: rgb(48, 48, 48);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(247, 125, 26);
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: ease 0.3s;
+    margin-top: 2vh;
+
+    &:hover {
+        background-color: rgb(247, 125, 26);
+    }
+}
+
+.links {
+    ul {
+        list-style: none;
+        padding-top: 1rem;
+        display: flex;
+    }
+    li {
+        padding: 1rem;
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .about {
+        display: block;
+    }
+    .mugshot {
+        width: 80vw;
+        object-fit: cover;
+    }
+}
