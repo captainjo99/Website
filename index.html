@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Captain Jo's website</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,10 +16,9 @@
 <body>
     <nav>
         <ul id="links">
-            <li id="home">Home</li>
-            <li id="projects">Projects</li>
-            <li id="gallery">Gallery</li>
-            <li id="about">About</li>
+            <li class="navLink" id="home-button"><a href="#home">Home</a></li>
+            <li class="navLink"><a href="#projects">Projects</a></li>
+            <li class="navLink"><a href="#about">About</a></li>
         </ul>
 
         <div class="bottom-line" id="line">
@@ -33,77 +31,67 @@
         </div>
     </nav>
     <main>
-        <div class="content-container">
-            <section class="content" id="#home">
-                <div class="bgimg"></div>
-                <div class="tape"></div>
-                <div class="middle">
-                    <h1>UNDER CONSTRUCTION</h1>
-                    <p>Try to visit at another point.</p>
-                </div>
-            </section>
-    
-            <section class="content" id="#projects">
-                <div class="bgimg"></div>
-                <div class="tape"></div>
-                <div class="middle">
-                    <h1>UNDER CONSTRUCTION</h1>
-                    <p>Try to visit at another point.</p>
-                </div>
-            </section>
-    
-            <section class="content" id="#gallery">
-                <div class="bgimg"></div>
-                <div class="tape"></div>
-                <div class="middle">
-                    <h1>UNDER CONSTRUCTION</h1>
-                    <p>Try to visit at another point.</p>
-                </div>
-            </section>
-    
-            <section class="content" id="#about">
-                <div class="team">
-                    <div class="person">
-                        <h3>Josip Matić</h3>
-                        <div class="about">
-                            <img class="mugshot" src="img/josip-matic.jpg" alt="josip-matic.jpg">
-                            <div class="bio">
-                                <p>
-                                    ldahfja ajdfhklahjfh dsa jsflkahfdas
-                                    dasfhjdsal ajdsfhjk ashfjlhdsa
-                                    asfndsjfkdjsn a fdsnafm dkffdhsalfag
-                                    fgagfafgfdagad fdajlhdjkf ajkjfhdlaf
-                                    ldahfja ajdfhklahjfh dsa jsflkahfdas
-                                    dasfhjdsal ajdsfhjk ashfjlhdsa
-                                    asfndsjfkdjsn a fdsnafm dkffdhsalfag
-                                    fgagfafgfdagad fdajlhdjkf ajkjfhdlaf
-                                    ldahfja ajdfhklahjfh dsa jsflkahfdas
-                                    dasfhjdsal ajdsfhjk ashfjlhdsa
-                                    asfndsjfkdjsn a fdsnafm dkffdhsalfag
-                                    fgagfafgfdagad fdajlhdjkf ajkjfhdlaf
-                                </p>
-                                <div class="links">
-                                    <ul>
-                                        <li><a href="https://github.com/captainjo99" target="_blank"
-                                                rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
-                                        <li><a href="https://twitter.com/CaptainJo19" target="_blank"
-                                                rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="" target="_blank" rel="noopener noreferrer"><i
-                                                    class="fa fa-youtube-play"></i></a></li>
-                                        <li><a href="https://steamcommunity.com/profiles/76561198963611855/" target="_blank"
-                                                rel="noopener noreferrer"><i class="fa fa-steam-square"></i></a></li>
-                                    </ul>
-                                </div>
-                                <div class="download">
-                                    <a href="/cvs/josip-matic.pdf" download="josip-matic.pdf">
-                                        <button class="btn"><i class="fa fa-download"
-                                                style="padding-right: 5px;"></i>Download CV</button>
-                                    </a>
-                                </div>
+        <section class="content" id="home">
+            <div class="bgimg"></div>
+            <div class="tape"></div>
+            <div class="middle">
+                <h1>UNDER CONSTRUCTION</h1>
+                <p>Try to visit at another point.</p>
+            </div>
+        </section>
+
+        <section class="content" id="projects">
+            <div class="bgimg"></div>
+            <div class="tape"></div>
+            <div class="middle">
+                <h1>UNDER CONSTRUCTION</h1>
+                <p>Try to visit at another point.</p>
+            </div>
+        </section>
+
+        <section class="content" id="about">
+            <div class="team">
+                <div class="person">
+                    <h3>Josip Matić</h3>
+                    <div class="about">
+                        <img class="mugshot" src="img/josip-matic.jpg" alt="josip-matic.jpg">
+                        <div class="bio">
+                            <p>
+                                ldahfja ajdfhklahjfh dsa jsflkahfdas
+                                dasfhjdsal ajdsfhjk ashfjlhdsa
+                                asfndsjfkdjsn a fdsnafm dkffdhsalfag
+                                fgagfafgfdagad fdajlhdjkf ajkjfhdlaf
+                                ldahfja ajdfhklahjfh dsa jsflkahfdas
+                                dasfhjdsal ajdsfhjk ashfjlhdsa
+                                asfndsjfkdjsn a fdsnafm dkffdhsalfag
+                                fgagfafgfdagad fdajlhdjkf ajkjfhdlaf
+                                ldahfja ajdfhklahjfh dsa jsflkahfdas
+                                dasfhjdsal ajdsfhjk ashfjlhdsa
+                                asfndsjfkdjsn a fdsnafm dkffdhsalfag
+                                fgagfafgfdagad fdajlhdjkf ajkjfhdlaf
+                            </p>
+                            <div class="links">
+                                <ul>
+                                    <li><a href="https://github.com/captainjo99" target="_blank"
+                                            rel="noopener noreferrer"><i class="fa fa-github"></i></a></li>
+                                    <li><a href="https://twitter.com/CaptainJo19" target="_blank"
+                                            rel="noopener noreferrer"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="" target="_blank" rel="noopener noreferrer"><i
+                                                class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="https://steamcommunity.com/profiles/76561198963611855/" target="_blank"
+                                            rel="noopener noreferrer"><i class="fa fa-steam-square"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="download">
+                                <a href="/cvs/josip-matic.pdf" download="josip-matic.pdf">
+                                    <button class="btn"><i class="fa fa-download"
+                                            style="padding-right: 5px;"></i>Download CV</button>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="person">
+                </div>
+                <!-- <div class="person">
                         <h3>Luka Kovač</h3>
                         <div class="about">
                             <img class="mugshot" src="img/luka-kovac.jpg" alt="luka-kovac.jpg">
@@ -135,12 +123,20 @@
                             </div>
                         </div>
                     </div> -->
-                </div>
-            </section>
-        </div>
-        
+            </div>
+        </section>
 
-        <script src="/js/app.js"></script>
+
+        <!-- <script src="/js/app.js"></script> -->
+        <script>
+            $(document).ready(function(){
+                $(".bottom-line").animate({width: $("#home-button").width(),left: $("#home-button").position().left}, 0);
+                $(".bottom-line").css("display", "block");
+                $(".navLink").click(function(){
+                    $(".bottom-line").animate({width: $(this).width() + 'px', left: $(this).position().left + 'px'}, 500);
+                });
+            });
+        </script>
     </main>
 </body>
 

@@ -7,6 +7,7 @@ $maincolor: rgb(247, 125, 26);
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -22,12 +23,7 @@ body {
 }
 
 main {
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    margin: auto;
     overflow-x: hidden;
-    scrollbar-width: none;
 }
 
 h1 {
@@ -40,8 +36,10 @@ h3 {
 }
 
 a {
+    font-size: 2rem;
     color: white;
     transition: ease 0.4s;
+    text-decoration: none;
     &:hover {
         color: $maincolor;
     }
@@ -68,36 +66,20 @@ nav {
         margin: auto;
     }
 
-    li {
-        font-size: 2rem;
-        transition: ease 0.4s;
-        &:hover {
-            color: $maincolor;
-            cursor: pointer;
-        }
-    }
-
     .bottom-line {
         margin-top: 1vh;
         height: 2px;
         width: 2%;
         background-color: $maincolor;
-        display: block;
+        display: none;
         position: absolute;
-        transition: width 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
-}
-
-.content-container {
-    display: flex;
-    width: 100vw;
 }
 
 .content {
     position: relative;
     width: 100vw;
     height: 100vh;
-    margin-top: 5vh;
 }
 
 .burger {
@@ -161,10 +143,6 @@ nav {
             align-items: center;
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
-        }
-        li {
-            padding: 50px;
-            opacity: 0;
         }
 
         .bottom-line {
