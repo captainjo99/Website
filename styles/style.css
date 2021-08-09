@@ -142,6 +142,10 @@ h1 {
   font-size: 9rem;
 }
 
+h2 {
+  font-size: 6rem;
+}
+
 h3 {
   font-size: 3rem;
   font-weight: lighter;
@@ -191,14 +195,37 @@ nav .bottom-line {
   height: 2px;
   width: 2%;
   background-color: #f77d1a;
-  display: none;
   position: absolute;
 }
 
 .content {
   position: relative;
-  /*     width: 100vw; */
-  /*     height: 100vh; */
+  min-height: 100vh;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -1;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png) repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-animation: move-background 70s linear infinite;
+          animation: move-background 70s linear infinite;
 }
 
 .burger {
@@ -223,12 +250,29 @@ nav .bottom-line {
           transform: translateX(0%);
 }
 
+.animText {
+  opacity: 0;
+}
+
+.slide-right {
+  -webkit-animation: 2s slide-right;
+          animation: 2s slide-right;
+}
+
+.slide-up {
+  -webkit-animation: 2s slide-up;
+          animation: 2s slide-up;
+}
+
 @media screen and (max-width: 950px) {
   h1 {
     font-size: 7rem;
   }
   nav ul {
     width: 100%;
+  }
+  .bottom-line {
+    display: block;
   }
 }
 
@@ -238,6 +282,9 @@ nav .bottom-line {
   }
   nav ul {
     width: 100%;
+  }
+  .bottom-line {
+    display: block;
   }
 }
 
@@ -252,7 +299,6 @@ nav .bottom-line {
     background-color: #4e4e4e;
     position: absolute;
     right: 0px;
-    height: 85vh;
     top: 15vh;
     width: 50%;
     display: -webkit-box;
@@ -271,6 +317,11 @@ nav .bottom-line {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  nav li {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    opacity: 0;
   }
   nav .bottom-line {
     display: none;
@@ -318,5 +369,79 @@ nav .bottom-line {
 .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+            transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+            transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-up {
+  from {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

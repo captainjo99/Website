@@ -4,9 +4,29 @@ let btnClickedValue;
 
 const init = () => {
   $(document).ready(function () {
-    console.log("init");
+    $(".animText").each(function () {
+      if($(this).visible(true)) {
+        if($(this).hasClass("animUp")) {
+          $(this).addClass("slide-up");
+        } else {
+          $(this).addClass("slide-right");
+        }
+        $(this).css("opacity","1");
+      }
+    });
+    $(window).scroll(function () {
+      $(".animText").each(function () {
+        if($(this).visible(true)) {
+          if($(this).hasClass("animUp")) {
+            $(this).addClass("slide-up");
+          } else {
+            $(this).addClass("slide-right");
+          }
+          $(this).css("opacity","1");
+        }
+      });
+    });
     animateBtmLine("#line", $("#home-button"), 0);
-    $("#line").css("display", "block");
     $(".navLink").click(function () {
       btnClicked = true;
       btnClickedValue = $(this).text().toLowerCase();
@@ -40,7 +60,7 @@ const navSlide = () => {
 
 const scrollHandler = () => {
   const options = {
-    threshold: 0.7,
+    threshold: 0.5,
   };
   let observer = new IntersectionObserver(navCtrl, options);
   $(".content").each(function () {
@@ -52,7 +72,6 @@ function navCtrl(entries) {
   entries.forEach((entry) => {
     const id = entry.target.id;
     if (entry.isIntersecting) {
-      console.log("entry");
       if (btnClicked) {
         if (btnClickedValue == id) {
           handleNav(id, ".navLink", "#line", animTime);
@@ -66,6 +85,9 @@ function navCtrl(entries) {
 }
 
 const app = () => {
+  particlesJS.load("particles-js", "assets/particles.json", function () {
+    console.log("callback - particles.js config loaded");
+  });
   init();
   navSlide();
   scrollHandler();
