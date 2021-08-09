@@ -166,7 +166,7 @@ p {
 
 nav {
   z-index: 1;
-  width: 100vw;
+  width: 100%;
   min-height: 10vh;
   padding: 3vh 25vw;
   position: fixed;
@@ -197,8 +197,8 @@ nav .bottom-line {
 
 .content {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  /*     width: 100vw; */
+  /*     height: 100vh; */
 }
 
 .burger {

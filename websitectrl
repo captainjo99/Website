@@ -1,0 +1,40 @@
+#!/bin/bash
+
+helpFunction()
+{
+	echo ""
+	echo "Usage: $0 [-d param]:[-u]"
+	echo -e "\t[-d param] Download website files from GitHub"
+	echo -e "\t[-u param] Update website files in directory"
+	echo -e "\t-c Change css and html tag values for cache-busting"
+	echo -e "\t-m Minify JavaScript"
+}
+
+downloadFiles() {
+	echo "Downloading $1"
+	cd var/cache
+	rm -Rf *
+	git clone $1
+	dirName=$(echo $1 | awk -F "/" '{print $NF}' | awk -F "." '{print $1}')
+	cd ..
+	cd ..
+
+}
+
+updateFiles() {
+	mv -v var/cache/$dirName/* $1
+	rm -f README.md
+}
+
+while getopts d:u:c:m opt
+do
+	case "${opt}" in
+		d ) downloadFiles ${OPTARG};;
+		u ) updateFiles ${OPTARG} ${OPTARG};;
+		c ) echo "not supported";;
+		m ) echo "Minify javascript";;
+		? ) helpFunction;;
+	esac
+done
+echo "Done."
+		
