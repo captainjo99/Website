@@ -4,27 +4,9 @@ let btnClickedValue;
 
 const init = () => {
   $(document).ready(function () {
-    $(".animText").each(function () {
-      if($(this).visible(true)) {
-        if($(this).hasClass("animUp")) {
-          $(this).addClass("slide-up");
-        } else {
-          $(this).addClass("slide-right");
-        }
-        $(this).css("opacity","1");
-      }
-    });
+    handleAnimation(".animText");
     $(window).scroll(function () {
-      $(".animText").each(function () {
-        if($(this).visible(true)) {
-          if($(this).hasClass("animUp")) {
-            $(this).addClass("slide-up");
-          } else {
-            $(this).addClass("slide-right");
-          }
-          $(this).css("opacity","1");
-        }
-      });
+      handleAnimation(".animText");
     });
     animateBtmLine("#line", $("#home-button"), 0);
     $(".navLink").click(function () {

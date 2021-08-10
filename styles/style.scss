@@ -1,9 +1,26 @@
 @import "about";
-@import "construction";
 
-$bgcolor: rgb(48, 48, 48);
+/*Color palette generator https://coolors.co*/
+
+/* $rich-black-fogra-39: #090809ff;
+$russian-green: #7a9b76ff;
+$rhythm: #797596ff;
+$uranian-blue: #b8e1ffff;
+$pumpkin: #fe7f2dff; */
+
+/* $bgcolor: rgb(48, 48, 48);
 $bgcolorlight: rgb(78, 78, 78);
-$maincolor: rgb(247, 125, 26);
+$maincolor: rgb(247, 125, 26); */
+
+$rich-black-fogra-39: rgb(9, 8, 9);
+$russian-green: rgb(122, 155, 118);
+$rhythm: rgb(121, 117, 150);
+$uranian-blue: rgb(184, 225, 255);
+$pumpkin: rgb(254, 127, 45);
+
+$bgcolor: $rich-black-fogra-39;
+$bgcolorlight: $rhythm;
+$maincolor: $pumpkin;
 
 html {
   font-size: 62.5%;
@@ -79,14 +96,21 @@ nav {
   }
 }
 
+.link {
+  transition: ease 0.4s;
+  &:hover {
+    font-size: 3rem;
+  }
+}
+
 .content {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .stars {
   background: black
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+    url(/img/stars.png) repeat;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -100,7 +124,7 @@ nav {
   width: 10000px;
   height: 100%;
   background: transparent
-    url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png)
+    url(/img/twinkling.png)
     repeat;
   background-size: 1000px 1000px;
   position: absolute;
@@ -130,6 +154,23 @@ nav {
   transform: translateX(0%);
 }
 
+.copyright {
+  position: relative;
+  text-align: center;
+  padding: 3vh;
+  text-align: center;
+  font-size: 1.5rem;
+  &::before {
+    content: '';
+    top: 0;
+    background-color: $bgcolorlight;
+    height: 1px;
+    width: 90vw;
+    position: absolute;
+    left: 5vw;
+  }
+}
+
 .animText {
   opacity: 0;
 }
@@ -140,6 +181,10 @@ nav {
 
 .slide-up {
   animation: 2s slide-up;
+}
+
+.slide-down {
+  animation: 2s slide-down;
 }
 
 @media screen and (max-width: 950px) {
@@ -250,6 +295,17 @@ nav {
 }
 
 @keyframes slide-up {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
   from {
     transform: translateY(-20%);
     opacity: 0;

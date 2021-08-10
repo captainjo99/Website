@@ -23,3 +23,18 @@ function handleNav(id, button, btmLine, animTime) {
     }
   });
 }
+
+function handleAnimation(animationClass) {
+  $(animationClass).each(function () {
+    if($(this).visible(true)) {
+      if($(this).hasClass("animUp")) {
+        $(this).addClass("slide-up");
+      } else if($(this).hasClass("animDown")) {
+        $(this).addClass("slide-down");
+      } else {
+        $(this).addClass("slide-right");
+      }
+      $(this).css("opacity","1");
+    }
+  });
+}

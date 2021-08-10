@@ -4,8 +4,7 @@
 }
 
 .team {
-  width: 100vw;
-  height: 100vh;
+  width: 95%;
   overflow-y: scroll;
   scrollbar-width: none;
 }
@@ -32,34 +31,28 @@
      object-fit: contain;
 }
 
-.download {
-  margin: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+/* .download {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
 }
 
 .btn {
-  background-color: #303030;
-  border-style: solid;
-  border-radius: 20px;
-  border-color: #f77d1a;
-  color: white;
-  padding: 12px 30px;
-  cursor: pointer;
-  font-size: 2rem;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
-  margin-top: 2vh;
-}
+    background-color: rgb(48, 48, 48);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: rgb(247, 125, 26);
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: ease 0.3s;
+    margin-top: 2vh;
 
-.btn:hover {
-  background-color: #f77d1a;
-}
-
+    &:hover {
+        background-color: rgb(247, 125, 26);
+    }
+} */
 .links ul {
   list-style: none;
   padding-top: 1rem;
@@ -84,38 +77,15 @@
   }
 }
 
-.bgimg {
-  background: url("https://captain-jo.com/img/warehouse.jpg");
-  height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-size: cover;
-  -webkit-filter: brightness(40%);
-          filter: brightness(40%);
-}
-
-.tape {
-  position: absolute;
-  background-image: url("https://captain-jo.com/img/construction.png");
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background-position: center;
-  background-size: cover;
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
-}
-
-.middle {
-  position: absolute;
-  text-shadow: 8px 8px 6px #000;
-  top: 50vh;
-  left: 50vw;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  text-align: center;
-}
-
+/*Color palette generator https://coolors.co*/
+/* $rich-black-fogra-39: #090809ff;
+$russian-green: #7a9b76ff;
+$rhythm: #797596ff;
+$uranian-blue: #b8e1ffff;
+$pumpkin: #fe7f2dff; */
+/* $bgcolor: rgb(48, 48, 48);
+$bgcolorlight: rgb(78, 78, 78);
+$maincolor: rgb(247, 125, 26); */
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -131,7 +101,7 @@ html {
 body {
   color: white;
   font-family: "Montserrat", sans-serif;
-  background: #303030;
+  background: #090809;
 }
 
 main {
@@ -160,7 +130,7 @@ a {
 }
 
 a:hover {
-  color: #f77d1a;
+  color: #fe7f2d;
 }
 
 p {
@@ -174,8 +144,8 @@ nav {
   min-height: 10vh;
   padding: 3vh 25vw;
   position: fixed;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #303030), to(rgba(0, 0, 0, 0)));
-  background: linear-gradient(#303030 60%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(60%, #090809), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(#090809 60%, rgba(0, 0, 0, 0) 100%);
 }
 
 nav ul {
@@ -194,17 +164,26 @@ nav .bottom-line {
   margin-top: 1vh;
   height: 2px;
   width: 2%;
-  background-color: #f77d1a;
+  background-color: #fe7f2d;
   position: absolute;
+}
+
+.link {
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.link:hover {
+  font-size: 3rem;
 }
 
 .content {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 .stars {
-  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  background: black url(/img/stars.png) repeat;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -217,7 +196,7 @@ nav .bottom-line {
 .twinkling {
   width: 10000px;
   height: 100%;
-  background: transparent url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png) repeat;
+  background: transparent url(/img/twinkling.png) repeat;
   background-size: 1000px 1000px;
   position: absolute;
   right: 0;
@@ -250,6 +229,24 @@ nav .bottom-line {
           transform: translateX(0%);
 }
 
+.copyright {
+  position: relative;
+  text-align: center;
+  padding: 3vh;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.copyright::before {
+  content: '';
+  top: 0;
+  background-color: #797596;
+  height: 1px;
+  width: 90vw;
+  position: absolute;
+  left: 5vw;
+}
+
 .animText {
   opacity: 0;
 }
@@ -262,6 +259,11 @@ nav .bottom-line {
 .slide-up {
   -webkit-animation: 2s slide-up;
           animation: 2s slide-up;
+}
+
+.slide-down {
+  -webkit-animation: 2s slide-down;
+          animation: 2s slide-down;
 }
 
 @media screen and (max-width: 950px) {
@@ -296,7 +298,7 @@ nav .bottom-line {
     font-size: 4rem;
   }
   nav ul {
-    background-color: #4e4e4e;
+    background-color: #797596;
     position: absolute;
     right: 0px;
     top: 15vh;
@@ -421,6 +423,32 @@ nav .bottom-line {
 
 @-webkit-keyframes slide-up {
   from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    -webkit-transform: translateY(20%);
+            transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-down {
+  from {
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
     opacity: 0;
@@ -432,7 +460,7 @@ nav .bottom-line {
   }
 }
 
-@keyframes slide-up {
+@keyframes slide-down {
   from {
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
