@@ -1,3 +1,7 @@
+.team {
+  padding-bottom: 5vh;
+}
+
 .person {
   padding-top: 5vh;
   padding-left: 5vw;
@@ -146,6 +150,69 @@ nav .bottom-line {
   background: linear-gradient(black 0%, #090809 100%);
 }
 
+label {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.input {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+  outline-color: #797596;
+}
+
+.field {
+  padding-bottom: 2vh;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3vh;
+  display: none;
+}
+
+.contact-tip {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-top: 5vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.submit-btn {
+  background-color: #797596;
+  color: white;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.submit-btn:hover {
+  background-color: #fe7f2d;
+}
+
 .particles {
   position: absolute;
   height: 100%;
@@ -183,7 +250,7 @@ nav .bottom-line {
 
 .content {
   position: relative;
-  min-height: 100vh;
+  /*  min-height: 100vh; */
 }
 
 .stars {
@@ -233,6 +300,50 @@ nav .bottom-line {
           transform: translateX(0%);
 }
 
+.contact-container {
+  background-color: #7a9b76;
+  width: 95vw;
+  margin: auto;
+  margin-bottom: 5vh;
+  padding: 10vh 5vw;
+  border-radius: 20px;
+  -webkit-transition: max-height 2s ease-in;
+  transition: max-height 2s ease-in;
+  max-height: 1500px;
+}
+
+.contact-ctrl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact-btn {
+  background-color: #797596;
+  padding: 5vh 5vw;
+  margin-left: 8vw;
+  width: 30vw;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.contact-btn:hover {
+  background-color: #fe7f2d;
+  cursor: pointer;
+}
+
+.fa-chevron-right {
+  -webkit-animation: 2s chevron-anim infinite;
+          animation: 2s chevron-anim infinite;
+}
+
 .copyright {
   position: relative;
   text-align: center;
@@ -249,6 +360,51 @@ nav .bottom-line {
   width: 90vw;
   position: absolute;
   left: 5vw;
+}
+
+.cookie {
+  display: none;
+  position: fixed;
+  bottom: 1vh;
+  width: 100%;
+}
+
+.cookieCtnt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #797596;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2vh 2vw;
+  border-radius: 2vh;
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.cookieTxt {
+  margin-bottom: 2vh;
+  margin-right: 1vh;
+}
+
+.cookieBtn {
+  padding: 1vh 5vw;
+  background-color: #b8e1ff;
+  border-radius: 1vh;
+  border-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  -webkit-transition: ease 0.4s;
+  transition: ease 0.4s;
+}
+
+.cookieBtn:hover {
+  background-color: #fe7f2d;
+  color: white;
 }
 
 .animText {
@@ -291,6 +447,19 @@ nav .bottom-line {
   }
   .bottom-line {
     display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cookieCtnt {
+    display: block;
+    width: 80%;
+  }
+  .cookieTxt {
+    text-align: center;
+  }
+  .cookieBtn {
+    width: 100%;
   }
 }
 
@@ -474,6 +643,36 @@ nav .bottom-line {
     -webkit-transform: translateY(0);
             transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes chevron-anim {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(1vw);
+            transform: translateX(1vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes chevron-anim {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(1vw);
+            transform: translateX(1vw);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 /*# sourceMappingURL=style.css.map */

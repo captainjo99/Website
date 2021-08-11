@@ -97,6 +97,54 @@ nav {
   }
 }
 
+label {
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+}
+
+.input {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  width: 70%;
+  outline-color: $rhythm;
+}
+
+.field {
+  padding-bottom: 2vh;
+}
+
+.contact-form {
+  display: flex;
+  margin-top: 3vh;
+  display: none;
+}
+
+.contact-tip {
+  flex: 1;
+  margin-top: 5vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  flex: 1;
+}
+
+.submit-btn {
+  background-color: $rhythm;
+  color: white;
+  transition: ease 0.4s;
+  &:hover {
+    background-color: $maincolor;
+  }
+}
+
 .particles {
   position: absolute;
   height: 100%;
@@ -128,7 +176,7 @@ nav {
 
 .content {
   position: relative;
-  min-height: 100vh;
+ /*  min-height: 100vh; */
 }
 
 .stars {
@@ -177,6 +225,42 @@ nav {
   transform: translateX(0%);
 }
 
+.contact-container {
+  background-color: $russian-green;
+  width: 95vw;
+  margin: auto;
+  margin-bottom: 5vh;
+  padding: 10vh 5vw;
+  border-radius: 20px;
+  transition: max-height 2s ease-in;
+  max-height: 1500px;
+}
+
+.contact-ctrl {
+  display: flex;
+  align-items: center;
+}
+
+.contact-btn {
+  background-color: $rhythm;
+  padding: 5vh 5vw;
+  margin-left: 8vw;
+  width: 30vw;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 20px;
+  transition: ease 0.4s;
+  &:hover {
+    background-color: $maincolor;
+    cursor: pointer;
+  }
+}
+
+.fa-chevron-right {
+  animation: 2s chevron-anim infinite;
+}
+
 .copyright {
   position: relative;
   text-align: center;
@@ -191,6 +275,43 @@ nav {
     width: 90vw;
     position: absolute;
     left: 5vw;
+  }
+}
+
+.cookie {
+  display: none;
+  position: fixed;
+  bottom: 1vh;
+  width: 100%;
+}
+
+.cookieCtnt {
+  display: flex;
+  background-color: $bgcolorlight;
+  align-items: center;
+  padding: 2vh 2vw;
+  border-radius: 2vh;
+  margin: auto;
+  width: fit-content;
+}
+
+.cookieTxt {
+  margin-bottom: 2vh;
+  margin-right: 1vh;
+}
+
+.cookieBtn {
+  padding: 1vh 5vw;
+  background-color: $uranian-blue;
+  border-radius: 1vh;
+  border-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.9rem;
+  font-weight: bold;
+  transition: ease 0.4s;
+  &:hover {
+    background-color: $maincolor;
+    color: white;
   }
 }
 
@@ -235,6 +356,19 @@ nav {
   }
   .bottom-line {
     display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cookieCtnt {
+    display: block;
+    width: 80%;
+  }
+  .cookieTxt {
+    text-align: center;
+  }
+  .cookieBtn {
+    width: 100%;
   }
 }
 
@@ -336,5 +470,17 @@ nav {
   to {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes chevron-anim {
+  from {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1vw);
+  }
+  to {
+    transform: translateX(0);
   }
 }

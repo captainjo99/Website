@@ -4,6 +4,12 @@ let btnClickedValue;
 
 const init = () => {
   $(document).ready(function () {
+    $(".cookieBtn").click(function () {
+      $(".cookie").css("display", "none");
+    });
+    $(".contact-btn").click(function () {
+      $(".contact-form").css("display", "flex");
+    });
     handleAnimation(".animText");
     $(window).scroll(function () {
       handleAnimation(".animText");
