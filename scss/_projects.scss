@@ -1,0 +1,40 @@
+@import "_constants";
+
+.particles {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    &::before {
+        content: "";
+        height: 5vh;
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(rgba($bgcolor, 1) 30%, rgba(black, 0) 100%);
+    }
+    &::after {
+        content: "";
+        display: block;
+        height: 5vh;
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(rgba($bgcolor, 0) 30%, rgba($bgcolor, 1) 100%);
+        bottom: 0;
+    }
+}
+
+.project-tab-container {
+    padding: 6vh;
+    width: 70vw;
+    margin: auto;
+}
+
+.project-tab {
+    width: 100%;
+    padding: 5vh 2vw;
+    background-color: $bgcolorlight;
+    border-radius: 5vh;
+    margin-bottom: 3vh;
+    &:hover {
+        scale: 1.5;
+    }
+}
