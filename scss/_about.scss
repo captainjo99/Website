@@ -1,50 +1,96 @@
 .team {
-    padding-bottom: 5vh;
+    padding: 5vh 0;
+    background-color: $color1;
 }
 
 .person {
     padding-top: 5vh;
-    padding-left: 5vw;
-}
-
-.about {
     display: flex;
-    padding-top: 3vh;
-    padding-left: 2vw;
-    padding-right: 10vw;
+    width: 80%;
+    margin: auto;
 }
 
-.bio {
-    padding-right: 2vw;
+.image-border {
+    padding: 5px;
+    margin-right: 2vw;
+    margin-bottom: 1vh;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color2;
+    border-radius: 12px;
+    height: fit-content;
 }
 
 .mugshot {
-    padding-right: 2vw;
-    padding-bottom: 1vw;
-    max-width: 40vw;
+    max-width: 15vw;
     min-width: 10vw;
     height: auto;
     object-fit: contain;
+    border-radius: 10px;
+}
+
+.bio {
+    margin-right: 2vw;
 }
 
 .links {
+    padding-top: 2vh;
     ul {
         list-style: none;
-        padding-top: 1rem;
         display: flex;
-    }
-    li {
-        padding: 1rem;
-        font-size: 3rem;
+        li {
+            padding: 8px;
+            a {
+                display: block;
+                height: 40px;
+                width: 40px;
+                border-radius: 5px;
+                position: relative;
+                font-size: 30px;
+                &:hover {
+                    background-color: white;
+                    border-radius: 50%;
+                    .fa-youtube-play{
+                        color: #c4302b;
+                    }
+                    .fa-twitter{
+                        color: #1da1f2;
+                    }
+                    .fa-github{
+                        color: black;
+                    }
+                    .fa-steam-square{
+                        background: linear-gradient(180deg,#000000,#00adee);
+                        background-clip: text;
+                        color: transparent;
+                    }
+                    .fa-instagram{
+                        background: linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d);
+                        background-clip: text;
+                        color: transparent;
+                    }
+                    .fa-facebook-square{
+                        color: #4267b2;
+                    }
+                }
+            }
+        }
     }
 }
 
-@media screen and (max-width: 1200px) {
-    .about {
+.fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: ease 0.4s;
+}
+
+@media screen and (max-width: 925px) {
+    .person {
         display: block;
     }
     .mugshot {
-        width: 80vw;
-        object-fit: cover;
+        max-width: 100%;
     }
 }
